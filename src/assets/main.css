@@ -1,35 +1,81 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+body {
+  background:#f2f2f2;
+  color: #444;
+  margin: 0;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+body * {
+  font-family: "Montserrat";
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+/* header */
+header {
+  background: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+header img {
+  max-width: 60px;
+  transform: rotate(10deg);
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  padding-top: 25px;
+}
+
+/* Task */
+.task-list {
+  max-width: 640px;
+  margin: 20px auto;
+}
+.task{
+  padding: 6px 20px;
+  background: #ffff;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task h3, .task .icons {
+  display: inline-block;
+}
+
+.task .icons {
+  text-align: right;
+}
+
+.task i {
+  font-size: 1.4em;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #bbb
+}
+
+/* filter */
+.filter {
+  width: 640px;
+  margin: 10px auto;
+  text-align: right;
+}
+
+.filter button {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #555;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1em;
+
 }
